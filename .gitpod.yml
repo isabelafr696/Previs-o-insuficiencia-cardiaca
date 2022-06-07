@@ -1,0 +1,7 @@
+# Este arquivo de configuração foi gerado automaticamente pelo Gitpod.
+# Por favor, ajuste às suas necessidades (consulte https://www.gitpod.io/docs/config-gitpod-file)
+# e envie este arquivo para seu repositório git remoto para compartilhar a bondade com os outros.
+
+tarefas :
+  - init : pip install -r requirements.txt
+    comando : python app.py
