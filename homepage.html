@@ -3,7 +3,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
-<title>Predict Churn</title>
+<title>Previsão de insuficiencia cardiaca</title>
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 
   <fieldset>
     <div class="alert">
-        <h2>Predict Churn</h2>
+        <h2>Previsão de insuficiencia cardiaca</h2>
         
     </div>
     
@@ -23,16 +23,16 @@
         
       <ul>
       <li>
-        <input type="radio" id="Gender" name="Gender" value="0" required>
-        <label for="Gender">Masculino</label>
+        <input type="radio" id="sex" name="sex" value="0" required>
+        <label for="sex">Masculino</label>
         
         <div class="check"></div>
       </li>
       
           
       <li>
-        <input type="radio" id="Gender" name="Gender" value="1" required>
-        <label for="Gender">Feminino</label>
+        <input type="radio" id="sex" name="sex" value="1" required>
+        <label for="sex">Feminino</label>
         
         <div class="check"><div class="inside"></div></div>
       </li>
@@ -45,20 +45,53 @@
 
     <div class="container">
         
-        <h2>Idade Superior a 35 anos:</h2>
+        <h2>Digite sua idade:</h2>
+        
+        <input type="text" name="age"/>
+
+        <h2>Digite creatinina fosfoquinase :</h2>
+        
+        <input type="text" name="creatinine_phosphokinase"/>
+
+        <h2>Digite fração de ejeção:</h2>
+        
+        <input type="text" name="ejection_fraction"/>
+
+        <h2>Digite o nº de plaquetas:</h2>
+        
+        <input type="text" name="platelets"/>
+
+        <h2>Digite o nivel de creatina:</h2>
+        
+        <input type="text" name="serum_creatinine"/>
+        
+        <h2>Digite o nivel de sódio:</h2>
+        
+        <input type="text" name="serum_sodium"/>
+
+        <h2>Digite o tempo em horas:</h2>
+        
+        <input type="text" name="time"/>
+
+        
+      
+       
+        
+    </div>
+    <h2>Possui anemia:</h2>
         
       <ul>
       <li>
-        <input type="radio" id="Senior_Citizen" name="Senior_Citizen" value="1" required>
-        <label for="Senior_Citizen">Sim</label>
+        <input type="radio" id="anaemia" name="anaemia" value="0" required>
+        <label for="anaemia">Não</label>
         
         <div class="check"></div>
       </li>
       
           
       <li>
-        <input type="radio" id="Senior_Citizen" name="Senior_Citizen" value="0" required>
-        <label for="Senior_Citizen">Não</label>
+        <input type="radio" id="anaemia" name="anaemia" value="1" required>
+        <label for="anaemia">Sim</label>
         
         <div class="check"><div class="inside"></div></div>
       </li>
@@ -68,44 +101,21 @@
     <div class="signature">
         
     </div>
-    <h2>Serviço de Telefone:</h2>
         
-      <ul>
-      <li>
-        <input type="radio" id="Phone_Service" name="Phone_Service" value="1" required>
-        <label for="Phone_Service">Sim</label>
-        
-        <div class="check"></div>
-      </li>
-      
-          
-      <li>
-        <input type="radio" id="Phone_Service" name="Phone_Service" value="2" required>
-        <label for="Phone_Service">Não</label>
-        
-        <div class="check"><div class="inside"></div></div>
-      </li>
-    </ul>
-    </div>
-    
-    <div class="signature">
-        
-    </div>
-        
-    <h2>Suporte Técnico:</h2>
+    <h2>Possui diabetes:</h2>
         
     <ul>
     <li>
-      <input type="radio" id="Tech_Support" name="Tech_Support" value="0" required>
-      <label for="Tech_Support">Sim</label>
+      <input type="radio" id="diabetes" name="diabetes" value="0" required>
+      <label for="diabetes">Não</label>
       
       <div class="check"></div>
     </li>
     
         
     <li>
-      <input type="radio" id="Tech_Support" name="Tech_Support" value="1" required>
-      <label for="Tech_Support">Não</label>
+      <input type="radio" id="diabetes" name="diabetes" value="1" required>
+      <label for="diabetes">Sim</label>
       
       <div class="check"><div class="inside"></div></div>
     </li>
@@ -116,20 +126,20 @@
       
   </div>
 
-  <h2>Streaming Movies:</h2>
+  <h2>Possui pressão alta:</h2>
         
       <ul>
       <li>
-        <input type="radio" id="Streaming_Movies" name="Streaming_Movies" value="0" required>
-        <label for="Streaming_Movies">Sim</label>
+        <input type="radio" id="high_blood_pressure" name="high_blood_pressure" value="0" required>
+        <label for="high_blood_pressure">Não</label>
         
         <div class="check"></div>
       </li>
       
           
       <li>
-        <input type="radio" id="Streaming_Movies" name="Streaming_Movies" value="1" required>
-        <label for="Streaming_Movies">Não</label>
+        <input type="radio" id="high_blood_pressure" name="high_blood_pressure" value="1" required>
+        <label for="high_blood_pressure">Sim</label>
         
         <div class="check"><div class="inside"></div></div>
       </li>
@@ -143,79 +153,32 @@
     </div>
     <div class="container">
         
-        <h2>Formas de pagamento:</h2>
+        <h2>É fumante:</h2>
         
       <ul>
       <li>
-        <input type="radio" id="Payment_Method" name="Payment_Method" value="0" required>
-        <label for="Payment_Method">Cheque eletrônico</label>
+        <input type="radio" id="smoking" name="smoking" value="0" required>
+        <label for="smoking">Não</label>
         
         <div class="check"></div>
       </li>
 
       <li>
-        <input type="radio" id="Payment_Method" name="Payment_Method" value="1" required>
-        <label for="Payment_Method">Cheque Físico</label>
+        <input type="radio" id="smoking" name="smoking" value="1" required>
+        <label for="smoking">Sim</label>
         
-        <div class="check"></div>
+        <div class="check"><div class="inside"></div></div>
       </li>     
 
-      <li>
-        <input type="radio" id="Payment_Method" name="Payment_Method" value="2" required>
-        <label for="Payment_Method">Transferência Bancária</label>
-        
-        <div class="check"></div>
-      </li>  
-          
-      <li>
-        <input type="radio" id="Payment_Method" name="Payment_Method" value="3" required>
-        <label for="Payment_Method">Cartão de Crédito</label>
-        
-        <div class="check"><div class="inside"></div></div>
-      </li>
-    </ul>
-    </div>
-    
-    <div class="signature">
-        
-    </div>
-
-    <div class="container">
-        
-        <h2>Contrato:</h2>
-        
-      <ul>
-      <li>
-        <input type="radio" id="Contract" name="Contract" value="2">
-        <label for="Contract">Mês a mês</label>
-        
-        <div class="check"></div>
-      </li>
-
-      <li>
-        <input type="radio" id="Contract" name="Contract" value="1">
-        <label for="Contract">Um ano</label>
-        
-        <div class="check"></div>
-      </li>
       
-          
-      <li>
-        <input type="radio" id="Contract" name="Contract" value="0">
-        <label for="Contract">Dois ano</label>
-        
-        <div class="check"><div class="inside"></div></div>
-      </li>
     </ul>
     </div>
     
-    <div class="signature">
-        
-    </div>
+    
 
     <div class="container">
       <div class="text-box">
-          <button class="btn btn-white btn-animate">Prediction Churn</button>
+          <button class="btn btn-white btn-animate">Previsão de morte</button>
       </div>
 
     <script>
@@ -223,57 +186,51 @@
                   
           const btn = document.querySelector('#btn');
           btn.addEventListener('click', (event) => {
-            let checkboxesGender = document.querySelectorAll('input[name="Gender"]:checked');
-            let checkboxesSeniorCitizen = document.querySelectorAll('input[name="Senior_Citizen"]:checked');
-            let checkboxesTechSupport = document.querySelectorAll('input[name="Tech_Support"]:checked');
-            let checkboxesStreamingMovies = document.querySelectorAll('input[name="Streaming_Movies"]:checked');
-            let checkboxesContract = document.querySelectorAll('input[name="Contract"]:checked');
-            let checkboxesPaymentMethod = document.querySelectorAll('input[name="Payment_Method"]:checked');
+            let checkboxessex = document.querySelectorAll('input[name="sex"]:checked');
+            let checkboxesanaemia = document.querySelectorAll('input[name="anaemia"]:checked');
+            let checkboxesdiabetes = document.querySelectorAll('input[name="diabetes"]:checked');
+            let checkboxeshigh_blood_pressure = document.querySelectorAll('input[name="high_blood_pressure"]:checked');
+            let checkboxessmoking = document.querySelectorAll('input[name="smoking"]:checked');
 
-            let valuesGender = [];
-            let valuesSeniorCitizen = [];
-            let valuesTechSupport = [];
-            let valuesStreamingMovies = [];
-            let valuesContract = [];
-            let valuesPaymentMethod = [];
+            let valuessex = [];
+            let valuesanaemia = [];
+            let valuesdiabetes = [];
+            let valueshigh_blood_pressure = [];
+            let valuessmoking = [];
             
-            checkboxesGender.forEach((checkbox) => {
-              valuesGender.push(checkbox.value);
+            checkboxessex.forEach((checkbox) => {
+              valuessex.push(checkbox.value);
             });
-            checkboxesSeniorCitizen.forEach((checkbox) => {
-              valuesSeniorCitizen.push(checkbox.value);
+            checkboxesanaemia.forEach((checkbox) => {
+              valuesanaemia.push(checkbox.value);
             });
-            checkboxesTechSupport.forEach((checkbox) => {
-              valuesTechSupport.push(checkbox.value);
+            checkboxesdiabetes.forEach((checkbox) => {
+              valuesdiabetes.push(checkbox.value);
             });
-            checkboxesStreamingMovies.forEach((checkbox) => {
-              valuesStreamingMovies.push(checkbox.value);
+            checkboxeshigh_blood_pressure.forEach((checkbox) => {
+              valueshigh_blood_pressure.push(checkbox.value);
             });
-            checkboxesContract.forEach((checkbox) => {
-              valuesContract.push(checkbox.value);
+            checkboxessmoking.forEach((checkbox) => {
+              valuessmoking.push(checkbox.value);
             });
-            checkboxesPaymentMethod.forEach((checkbox) => {
-              valuesPaymentMethod.push(checkbox.value);
-            });
+            
 
-            console.log("---------valuesGender----------")
-            console.log(valuesGender)
-            console.log("---------valuesGender--------")
-            console.log("------valuesSeniorCitizen---------")
-            console.log(valuesSeniorCitizen)
-            console.log("------valuesSeniorCitizen--------")
-            console.log("-----valuesTechSupport------")
-            console.log(valuesTechSupport)
-            console.log("------valuesTechSupport---------")
-            console.log("------valuesStreamingMovies--------")
-            console.log(valuesStreamingMovies)
-            console.log("------valuesStreamingMovies---------")
-            console.log("------valuesContract-------")
-            console.log(valuesContract)
-            console.log("-------valuesContract----------")
-            console.log("------valuesPaymentMethod----------")
-            console.log(valuesPaymentMethod)
-            console.log("-------valuesPaymentMethod---------")
+            console.log("---------valuessex----------")
+            console.log(valuessex)
+            console.log("---------valuessex--------")
+            console.log("------valuesanaemia---------")
+            console.log(valuesanaemia)
+            console.log("------valuesanaemia--------")
+            console.log("-----valuesdiabetes------")
+            console.log(valuesdiabetes)
+            console.log("------valuesdiabetes---------")
+            console.log("------valueshigh_blood_pressure--------")
+            console.log(valueshigh_blood_pressure)
+            console.log("------valueshigh_blood_pressure---------")
+            console.log("------valuessmoking-------")
+            console.log(valuessmoking)
+            console.log("-------valuessmoking----------")
+            
         });    
     </script>
       
