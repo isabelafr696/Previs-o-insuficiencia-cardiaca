@@ -1,46 +1,44 @@
-<!DOCTYPEhtml >
-< cabeça >
-    < link  rel =" stylesheet " type =" text/css " href =" stylesheet.css " media =" screen " />
-    < estilo >
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
+    <style>
 
 
-corpo {
+body {
         
 }
 
-. div . recipiente4 {
-    altura :  10 cm ;
-    posição : relativa }
-div . recipiente4 {
-    margem :  0 ;
-    fundo :  # 222222 ;
-    posição : absoluta;
-    topo :  50 % ;
-    esquerda :  50 % ;
-    margem direita :  -50 % ;
-    transform :  traduzir ( -50 % ,  -50 % ) }
-</ estilo >
+.div.container4 {
+    height: 10em;
+    position: relative }
+div.container4 {
+    margin: 0;
+    background: #222222;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+</style>
 
-    < title > predicao </ title >
+    <title>predicao</title>
 
-</ cabeça >
-< corpo >
+</head>
+<body>
         
     {% if predicao == 1 %}
 
-    < classe div  = rotatividade >
-        < marquee  width =" 700 " scrollamount =" 100 " scrolldelay =" 900 " loop =" 7 " > CHURN! </ marque >
-    </ div >
+    <div class=alto_risco>
+        <marquee width="700" scrollamount="100" scrolldelay="900" loop="7">Alto risco de óbito, procure um médico!</marquee>
+    </div>
 
-    {% senão %}
+    {% else %}
 
-    < classe div  = nao_churn >
-        < marquee  width =" 700 "   scrollamount =" 100 " scrolldelay =" 900 " loop =" 7 " > NÃO CHURN! </ marque >
-    </ div >
+    <div class=baixo_risco>
+        <marquee width="700"  scrollamount="100" scrolldelay="900" loop="7">Baixo risco de óbito, cuide melhor de sua saúde!</marquee>
+    </div>
      
-    {% fim se %}
+    {% endif %}
         
    
-</ corpo >
-
-</ html >     
+</body>
