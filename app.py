@@ -12,20 +12,30 @@ def homepage():
 
 @app.route('/predicao', methods=['POST'])
 def predicao():
-  Gender = int(request.form['Gender'])
-  Senior_Citizen = int(request.form['Senior_Citizen'])
-  Phone_Service = int(request.form['Phone_Service'])
-  Tech_Support = int(request.form['Tech_Support'])
-  Streaming_Movies = int(request.form['Streaming_Movies'])
-  Contract = int(request.form['Contract'])
-  Payment_Method = int(request.form['Payment_Method'])
-  predicao = model.predict(['Gender'])
-  predicao = model.predict(['Senior_Citizen'])
-  predicao = model.predict(['Phone_Service'])
-  predicao = model.predict(['Tech_Support'])
-  predicao = model.predict(['Streaming_Movies'])
-  predicao = model.predict(['Contract'])
-  predicao = model.predict(['Payment_Method'])
+  age = int(request.form['age'])
+  anaemia = int(request.form['anaemia'])
+  creatinine_phosphokinase = int(request.form['creatinine_phosphokinase'])
+  diabetes = int(request.form['diabetes'])
+  ejection_fraction = int(request.form['ejection_fraction'])
+  high_blood_pressure = int(request.form['high_blood_pressure'])
+  platelets = int(request.form['platelets'])
+  serum_creatinine = int(request.form['serum_creatinine'])
+  serum_sodium = int(request.form['serum_sodium'])
+  sex = int(request.form['sex'])
+  smoking = int(request.form['smoking'])
+  time = int(request.form['time'])
+  predicao = model.predict(['age'])
+  predicao = model.predict(['anaemia'])
+  predicao = model.predict(['creatinine_phosphokinase'])
+  predicao = model.predict(['diabetes'])
+  predicao = model.predict(['ejection_fraction'])
+  predicao = model.predict(['high_blood_pressure'])
+  predicao = model.predict(['platelets'])
+  predicao = model.predict(['serum_creatinine'])
+  predicao = model.predict(['serum_sodium'])
+  predicao = model.predict(['sex'])
+  predicao = model.predict(['smoking'])
+  predicao = model.predict(['time'])
   return render_template('predicao.html', predicao=predicao[0])
   
   
@@ -38,6 +48,3 @@ app.run(debug=True)
 
 # git commit -m "nomenovo"
 # git push
-© 2022 GitHub, Inc.
-Terms
-Pri
