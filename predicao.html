@@ -1,0 +1,46 @@
+<!DOCTYPEhtml >
+< cabeça >
+    < link  rel =" stylesheet " type =" text/css " href =" stylesheet.css " media =" screen " />
+    < estilo >
+
+
+corpo {
+        
+}
+
+. div . recipiente4 {
+    altura :  10 cm ;
+    posição : relativa }
+div . recipiente4 {
+    margem :  0 ;
+    fundo :  # 222222 ;
+    posição : absoluta;
+    topo :  50 % ;
+    esquerda :  50 % ;
+    margem direita :  -50 % ;
+    transform :  traduzir ( -50 % ,  -50 % ) }
+</ estilo >
+
+    < title > predicao </ title >
+
+</ cabeça >
+< corpo >
+        
+    {% if predicao == 1 %}
+
+    < classe div  = rotatividade >
+        < marquee  width =" 700 " scrollamount =" 100 " scrolldelay =" 900 " loop =" 7 " > CHURN! </ marque >
+    </ div >
+
+    {% senão %}
+
+    < classe div  = nao_churn >
+        < marquee  width =" 700 "   scrollamount =" 100 " scrolldelay =" 900 " loop =" 7 " > NÃO CHURN! </ marque >
+    </ div >
+     
+    {% fim se %}
+        
+   
+</ corpo >
+
+</ html >     
