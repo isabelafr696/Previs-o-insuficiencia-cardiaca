@@ -1,30 +1,40 @@
-import cloudpickle
-from flask import Flask, render_template, request
-import numpy as np
+importar  cloudpickle
+from  flask  import  Flask , render_template , request
 
-with open('model.pkl', 'rb') as file_in:
-  model = cloudpickle.load(file_in)
+com  open ( 'model.pkl' , 'rb' ) como  file_in :
+  modelo  =  cloudpickle . carregar ( arquivo_in )
 
-app = Flask(__name__)
+app  =  Flask ( __name__ )
 
-@app.route('/')
-def index():
-  return render_template('\template\Predict Churn.html', nome='Fulano')
+@aplicativo . _ rota ( '/' )
+def  página inicial ():
+  return  render_template ( 'homepage.html' , nome = 'Fulano' )
 
-@app.route('/predicao', methods=['POST'])
-def predicao():
-    int_features=[int(x) for x in request.form.values()]
-    genero = request.form['genero']
-    idade = request.form['idade']
-    telefone= request.form['telefone']
-    suporte= request.form['suporte']
-    streaming= request.form['streaming']
-    predicao = model.predict([genero],[idade],[telefone],[suporte],[streaming])
-    return render_template('resposta.html', predicao=predicao[0])
+@aplicativo . _ route ( '/predicao' , métodos = [ 'POST' ])
+def  predicao ():
+  Gênero  =  int ( request . form [ 'Gender' ])
+  Senior_Citizen  =  int ( request . form [ 'Senior_Citizen' ])
+  Phone_Service  =  int ( request . form [ 'Phone_Service' ])
+  Tech_Support  =  int ( request . form [ 'Tech_Support' ])
+  Streaming_Movies  =  int ( request . form [ 'Streaming_Movies' ])
+  Contrato  =  int ( request . form [ 'Contract' ])
+  Payment_Method  =  int ( request . form [ 'Payment_Method' ])
+  predicao  =  modelo . prever ([ 'Gênero' ])
+  predicao  =  modelo . prever ([ 'Senior_Citizen' ])
+  predicao  =  modelo . prever ([ 'Phone_Service' ])
+  predicao  =  modelo . prever ([ 'Tech_Support' ])
+  predicao  =  modelo . prever ([ 'Streaming_Movies' ])
+  predicao  =  modelo . prever ([ 'Contrato' ])
+  predicao  =  modelo . prever ([ 'Payment_Method' ])
+  return  render_template ( 'predicao.html' , predicao = predicao [ 0 ])
+  
+  
+aplicativo . execute ( debug = True )
 
-app.run(debug=True)
+# pip install -r requirements.txt (instala como bibliotecas)
+# python app.py (para executar)
 
+#git adicionar.
 
-
-
-
+# git commit -m "nomenovo"
+#git push
