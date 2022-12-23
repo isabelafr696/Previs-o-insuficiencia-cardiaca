@@ -1,44 +1,46 @@
 <!DOCTYPE html>
+
 <head>
     <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
     <style>
 
+        .div.container4 {
+            height: 10em;
+            position: relative
+        }
 
-body {
-        
-}
-
-.div.container4 {
-    height: 10em;
-    position: relative }
-div.container4 {
-    margin: 0;
-    background: #222222;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) }
-</style>
+        div.container4 {
+            margin: 0;
+            background: #222222;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+        }
+    </style>
 
     <title>predicao</title>
 
 </head>
+
 <body>
-        
+
     {% if predicao == 1 %}
 
     <div class=alto_risco>
-        <marquee width="700" scrollamount="100" scrolldelay="900" loop="7">Alto risco de óbito, procure um médico!</marquee>
+        <marquee width="700" scrollamount="100" scrolldelay="900" loop="7">Alto risco de óbito, procure um médico!
+        </marquee>
     </div>
 
     {% else %}
 
     <div class=baixo_risco>
-        <marquee width="700"  scrollamount="100" scrolldelay="900" loop="7">Baixo risco de óbito, cuide melhor de sua saúde!</marquee>
+        <marquee width="700" scrollamount="100" scrolldelay="900" loop="7">Baixo risco de óbito, cuide melhor de sua
+            saúde!</marquee>
     </div>
-     
+
     {% endif %}
-        
-   
+
+
 </body>
